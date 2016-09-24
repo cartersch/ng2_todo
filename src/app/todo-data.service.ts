@@ -5,4 +5,14 @@ export class TodoDataService {
 
   constructor() { }
 
+  todos = [];
+
+  addTodo(todo){
+    this.todos.push(todo);
+  }
+
+  getTodos(){
+    return this.todos;
+  }
+
 }
