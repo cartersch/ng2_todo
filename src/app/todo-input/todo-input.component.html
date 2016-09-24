@@ -1,3 +1,9 @@
-<p>
-  todo-input works!
-</p>
+<div class="row">
+  <div class="col-md-8 col-md-offset-2 form-inline">
+    <div class="form-group todo-input-group">
+      <label for="todo-task" class="sr-only">Add Item</label>
+      <input class="form-control todo-input" placeholder="Add Item" type="text" name="todo-task" [(ngModel)]="todo.task" />
+    </div>
+    <button class="btn btn-purple" (click)="addTodo()">Add</button>
+  </div>
+</div>
