@@ -6,6 +6,7 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { TodoInputComponent } from './todo-input/todo-input.component';
 import { TodoListComponent } from './todo-list/todo-list.component';
+import { TodoDataService } from './todo-data.service';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import { TodoListComponent } from './todo-list/todo-list.component';
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [TodoDataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
