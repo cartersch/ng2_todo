@@ -19,6 +19,10 @@ export class TodoInputComponent implements OnInit {
     this.todo = {};
   }
 
+  hasInput(){
+    return this.todo['task'] ? false : true;
+  }
+
   ngOnInit() {
   }
 

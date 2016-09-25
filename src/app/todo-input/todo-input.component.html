@@ -4,6 +4,6 @@
       <label for="todo-task" class="sr-only">Add Item</label>
       <input class="form-control todo-input" placeholder="Add Item" type="text" name="todo-task" [(ngModel)]="todo.task" />
     </div>
-    <button class="btn btn-purple" (click)="addTodo()">Add</button>
+    <button class="btn btn-purple" [disabled]="hasInput()" (click)="addTodo()">Add</button>
   </div>
 </div>
