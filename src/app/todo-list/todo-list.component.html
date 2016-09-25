@@ -1,3 +1,24 @@
-<p>
-  todo-list works!
-</p>
+<div class="row todo-list">
+  <div class="col-md-8 col-md-offset-2">
+    
+    <p class="text-center" *ngIf="todos.length == 0">
+      <strong>Nothing to do at the moment!</strong>
+    </p>
+    
+    <div *ngIf="todos.length > 0">
+      <ul class="list-unstyled">
+        <li class="todo-item" *ngFor="let todo of todos">
+          <div style="font-size: 1.25em; padding-top:5px">
+            {{todo.task}}
+          </div>
+          <div class="btn-group">
+            <button type="button" class="btn btn-default">Done</button>
+            <button type="button" class="btn btn-default">Edit</button>
+            <button type="button" class="btn btn-default">Delete</button>
+          </div>
+        </li>
+      </ul>  
+    </div>
+
+  </div>
+</div>
