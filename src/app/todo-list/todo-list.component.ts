@@ -14,8 +14,26 @@ export class TodoListComponent implements OnInit {
     this.todos = this.todoService.getTodos();
    }
 
-   updateTodoStatus(todo){
+   todoStatus(todo){
+     let statusClass ="";
+
+     if(todo.done){
+       statusClass = "complete";
+     } else {
+       statusClass = "incomplete";
+     }
+
+     return statusClass;
+   }
+
+   doneTodo(todo){
      todo.done = !todo.done;
+   }
+
+   deleteTodo(todo){
+     if(confirm("Are you sure?")){
+       this.todoService.deleteTodo(todo.id);
+     }   
    }
 
   ngOnInit() {
