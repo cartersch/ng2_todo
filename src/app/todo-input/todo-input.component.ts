@@ -8,14 +8,15 @@ import { TodoDataService } from '../todo-data.service';
 })
 export class TodoInputComponent implements OnInit {
 
-  todo = {}
+  todo;
 
-  constructor(private todoData : TodoDataService) { }
+  constructor(private todoService : TodoDataService) {
+     this.todo = {};
+   }
 
   addTodo(){
-    console.log(this.todo);
     this.todo['done'] = false;
-    this.todoData.addTodo(this.todo);
+    this.todoService.addTodo(this.todo);
     this.todo = {};
   }
 
